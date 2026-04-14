@@ -39,18 +39,21 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
-          <Button asChild>
-            <Link to="/contact">Get Started</Link>
+          <Button render={<Link to="/contact" />}>
+            Get Started
           </Button>
         </nav>
 
         {/* Mobile Nav */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
-              <Menu className="h-6 w-6" />
-            </Button>
-          </SheetTrigger>
+          <SheetTrigger
+            className="md:hidden"
+            render={
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+              </Button>
+            }
+          />
           <SheetContent side="right" className="w-[300px] sm:w-[400px]">
             <nav className="flex flex-col space-y-4 mt-8">
               {navItems.map((item) => (
@@ -66,8 +69,8 @@ export function Navbar() {
                   {item.name}
                 </Link>
               ))}
-              <Button asChild className="w-full">
-                <Link to="/contact" onClick={() => setIsOpen(false)}>Get Started</Link>
+              <Button className="w-full" render={<Link to="/contact" onClick={() => setIsOpen(false)} />}>
+                Get Started
               </Button>
             </nav>
           </SheetContent>

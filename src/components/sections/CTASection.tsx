@@ -23,11 +23,11 @@ export function CTASection() {
               Join hundreds of organizations that have optimized their record management with Recordsolutions. Get a free consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="h-12 px-8 text-base font-semibold" asChild>
-                <Link to="/contact">Get a Free Consultation</Link>
+              <Button size="lg" variant="secondary" className="h-12 px-8 text-base font-semibold" render={<Link to="/contact" />}>
+                Get a Free Consultation
               </Button>
-              <Button size="lg" variant="outline" className="h-12 px-8 text-base font-semibold border-white text-white hover:bg-white hover:text-accent" asChild>
-                <Link to="/services">View All Services</Link>
+              <Button size="lg" variant="outline" className="h-12 px-8 text-base font-semibold border-white text-white hover:bg-white hover:text-accent" render={<Link to="/services" />}>
+                View All Services
               </Button>
             </div>
           </div>

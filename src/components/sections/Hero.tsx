@@ -47,14 +47,14 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-10 flex flex-col sm:flex-row gap-4"
           >
-            <Button size="lg" className="h-12 px-8 text-base" asChild>
-              <Link to="/contact">Get Started Today</Link>
+            <Button size="lg" className="h-12 px-8 text-base" render={<Link to="/contact" />}>
+              Get Started Today
             </Button>
-            <Button size="lg" variant="outline" className="h-12 px-8 text-base group" asChild>
-              <Link to="/services">
+            <Button size="lg" variant="outline" className="h-12 px-8 text-base group" render={<Link to="/services" />}>
+              <span className="flex items-center">
                 Explore Services
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+              </span>
             </Button>
           </motion.div>
         </div>

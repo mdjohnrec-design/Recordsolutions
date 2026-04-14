@@ -98,8 +98,8 @@ export default function Services() {
                   </div>
                 </div>
 
-                <Button asChild size="lg">
-                  <Link to="/contact">Request Information</Link>
+                <Button size="lg" render={<Link to="/contact" />}>
+                  Request Information
                 </Button>
               </div>
               
